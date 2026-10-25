@@ -1,0 +1,14 @@
+# Public publication repository: deny by default.
+# Application source and instructor files remain local and private.
+/*
+!/.gitignore
+!/README.md
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/pages.yml
+!/website/
+/website/*
+!/website/_site/
+!/website/_site/**
