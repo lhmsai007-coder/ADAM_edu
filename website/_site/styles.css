@@ -1,0 +1,23 @@
+:root { --teaching-accent: #754093; --bs-link-color: #754093; --bs-link-hover-color: #562969; }
+body { color: #3e3047; background: #fffbfe; }
+h1, h2, h3, h4 { color: #63377c; }
+.navbar { background: #f5e7f4 !important; border-bottom: 1px solid #e5cce6; }
+.navbar-brand, .navbar .nav-link { color: #63377c !important; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #963e79 !important; }
+.dropdown-menu { background: #fff8fd; border-color: #e5cce6; }
+.dropdown-item:hover, .dropdown-item:focus { background: #f2dff1; color: #562969; }
+.hero { background: linear-gradient(120deg, #fce6ef, #eee4fa); border-left: 5px solid #ae629c; padding: 2rem; margin: 1rem 0 2rem; border-radius: 0 12px 12px 0; }
+.hero > p:first-child { color: var(--teaching-accent); letter-spacing: .04em; }
+.learning-card { border: 1px solid #e6cfe7; border-radius: 10px; padding: 1.3rem; background: #fff7fc; }
+.learning-card h3 { margin-top: 0; font-size: 1.3rem; }
+a { color: #754093; }
+a:hover { color: #562969; }
+.btn-primary { color: #fff; background-color: #754093; border-color: #754093; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active { color: #fff !important; background-color: #562969 !important; border-color: #562969 !important; }
+.btn-outline-primary { color: #754093; border-color: #754093; }
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active { color: #fff !important; background-color: #754093 !important; border-color: #754093 !important; }
+a:focus-visible, button:focus-visible { outline: 3px solid #b969a4; outline-offset: 3px; }
+#TOC .nav-link.active { color: #754093 !important; border-left-color: #ae629c !important; }
+.nav-footer { background: #f7edf7; border-top: 1px solid #e5cce6; color: #684e72; }
+::selection { background: #edcbe4; color: #3e3047; }
+@media (max-width: 600px) { .hero { padding: 1.2rem; } }

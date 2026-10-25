@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>User manual – ADAM-Edu</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ea1971949f186b5d7ecce1fd3cf000e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ADAM-Edu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./manual.html" aria-current="page"> 
+<span class="menu-text">User manual</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./exercises.html"> 
+<span class="menu-text">Practical exercise</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#purpose-and-workshop-route" id="toc-purpose-and-workshop-route" class="nav-link active" data-scroll-target="#purpose-and-workshop-route">1. Purpose and workshop route</a>
+  <ul class="collapse">
+  <li><a href="#before-the-workshop" id="toc-before-the-workshop" class="nav-link" data-scroll-target="#before-the-workshop">Before the workshop</a></li>
+  <li><a href="#workshop-quick-start" id="toc-workshop-quick-start" class="nav-link" data-scroll-target="#workshop-quick-start">Workshop quick start</a></li>
+  </ul></li>
+  <li><a href="#historical-population-simulation-model" id="toc-historical-population-simulation-model" class="nav-link" data-scroll-target="#historical-population-simulation-model">2. Historical population: simulation model</a>
+  <ul class="collapse">
+  <li><a href="#genome-and-initial-population-parameters" id="toc-genome-and-initial-population-parameters" class="nav-link" data-scroll-target="#genome-and-initial-population-parameters">Genome and initial population parameters</a></li>
+  <li><a href="#allele-frequencies-and-run-parameters" id="toc-allele-frequencies-and-run-parameters" class="nav-link" data-scroll-target="#allele-frequencies-and-run-parameters">Allele frequencies and run parameters</a></li>
+  <li><a href="#scenario-parameters" id="toc-scenario-parameters" class="nav-link" data-scroll-target="#scenario-parameters">Scenario parameters</a></li>
+  <li><a href="#reading-historical-outputs-and-choosing-a-population" id="toc-reading-historical-outputs-and-choosing-a-population" class="nav-link" data-scroll-target="#reading-historical-outputs-and-choosing-a-population">Reading historical outputs and choosing a population</a></li>
+  </ul></li>
+  <li><a href="#base-population-construction-and-genetic-architecture" id="toc-base-population-construction-and-genetic-architecture" class="nav-link" data-scroll-target="#base-population-construction-and-genetic-architecture">3. Base population: construction and genetic architecture</a>
+  <ul class="collapse">
+  <li><a href="#population-and-trait-parameters" id="toc-population-and-trait-parameters" class="nav-link" data-scroll-target="#population-and-trait-parameters">Population and trait parameters</a></li>
+  <li><a href="#base-outputs-and-display-controls" id="toc-base-outputs-and-display-controls" class="nav-link" data-scroll-target="#base-outputs-and-display-controls">Base outputs and display controls</a></li>
+  </ul></li>
+  <li><a href="#economic-objectives-and-correlated-response" id="toc-economic-objectives-and-correlated-response" class="nav-link" data-scroll-target="#economic-objectives-and-correlated-response">4. Economic objectives and correlated response</a></li>
+  <li><a href="#genotype-by-environment-interaction" id="toc-genotype-by-environment-interaction" class="nav-link" data-scroll-target="#genotype-by-environment-interaction">5. Genotype by environment interaction</a></li>
+  <li><a href="#current-population-the-yearly-breeding-cycle" id="toc-current-population-the-yearly-breeding-cycle" class="nav-link" data-scroll-target="#current-population-the-yearly-breeding-cycle">6. Current population: the yearly breeding cycle</a>
+  <ul class="collapse">
+  <li><a href="#prepared-programmes-and-basic-controls" id="toc-prepared-programmes-and-basic-controls" class="nav-link" data-scroll-target="#prepared-programmes-and-basic-controls">Prepared programmes and basic controls</a></li>
+  <li><a href="#ages-herds-and-information-settings" id="toc-ages-herds-and-information-settings" class="nav-link" data-scroll-target="#ages-herds-and-information-settings">Ages, herds and information settings</a></li>
+  </ul></li>
+  <li><a href="#breeding-schedule-parent-numbers-and-moet" id="toc-breeding-schedule-parent-numbers-and-moet" class="nav-link" data-scroll-target="#breeding-schedule-parent-numbers-and-moet">7. Breeding schedule, parent numbers and MOET</a></li>
+  <li><a href="#breeding-outputs-and-display-parameters" id="toc-breeding-outputs-and-display-parameters" class="nav-link" data-scroll-target="#breeding-outputs-and-display-parameters">8. Breeding outputs and display parameters</a></li>
+  <li><a href="#selection-and-prediction-methods" id="toc-selection-and-prediction-methods" class="nav-link" data-scroll-target="#selection-and-prediction-methods">9. Selection and prediction methods</a>
+  <ul class="collapse">
+  <li><a href="#mass-selection-and-oracle-tbv" id="toc-mass-selection-and-oracle-tbv" class="nav-link" data-scroll-target="#mass-selection-and-oracle-tbv">Mass selection and Oracle TBV</a></li>
+  <li><a href="#pedigree-blup" id="toc-pedigree-blup" class="nav-link" data-scroll-target="#pedigree-blup">Pedigree BLUP</a></li>
+  <li><a href="#gblup-and-single-step-gblup" id="toc-gblup-and-single-step-gblup" class="nav-link" data-scroll-target="#gblup-and-single-step-gblup">GBLUP and single-step GBLUP</a></li>
+  <li><a href="#multiple-traits-and-reaction-norm-prediction" id="toc-multiple-traits-and-reaction-norm-prediction" class="nav-link" data-scroll-target="#multiple-traits-and-reaction-norm-prediction">Multiple traits and reaction-norm prediction</a></li>
+  </ul></li>
+  <li><a href="#replicates-uncertainty-and-fair-comparisons" id="toc-replicates-uncertainty-and-fair-comparisons" class="nav-link" data-scroll-target="#replicates-uncertainty-and-fair-comparisons">10. Replicates, uncertainty and fair comparisons</a></li>
+  <li><a href="#practical-limitations-and-troubleshooting" id="toc-practical-limitations-and-troubleshooting" class="nav-link" data-scroll-target="#practical-limitations-and-troubleshooting">11. Practical limitations and troubleshooting</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">12. Glossary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">User manual</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="resources/ADAM_Edu_manual.pdf">Download the user manual (PDF)</a></p>
+<section id="purpose-and-workshop-route" class="level2">
+<h2 class="anchored" data-anchor-id="purpose-and-workshop-route">1. Purpose and workshop route</h2>
+<p>ADAM-Edu is a browser-based teaching tool for animal breeding and quantitative genetics. It connects population history and linkage disequilibrium (LD), the construction of a base population, and selection and reproduction over breeding years. Use the workshop links supplied by your instructor. You need a computer, a modern web browser and internet access.</p>
+<section id="before-the-workshop" class="level3">
+<h3 class="anchored" data-anchor-id="before-the-workshop">Before the workshop</h3>
+<p>You need a computer, a modern web browser and internet access. <strong>No installation, R, programming or participant account is needed.</strong> You can use any internet connection; you do not need to share the instructor’s Wi-Fi.</p>
+<ol type="1">
+<li>Open the workshop page: https://lhmsai007.shinyapps.io/ADAM-Edu-current/workshop/index.html</li>
+<li>Check that all three application buttons open. Save the manual and practical PDFs from that page. You do not need to read the whole manual before class.</li>
+<li>Find your browser’s Downloads folder. The applications exchange full population files through Download and Upload controls; separate tabs do not share populations automatically.</li>
+<li>Work in pairs. Record or download each result before another run replaces it. Keep the application tab open while a simulation runs.</li>
+</ol>
+</section>
+<section id="workshop-quick-start" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-quick-start">Workshop quick start</h3>
+<p>Follow the practical for four short stages: LD and historical diversity (0-4 minutes), base traits and economic values (4-8), breeding methods and donor reproduction (8-25), then a teaching activity (25-30). Begin with LD, then use the prepared history if a new run is slow. Generate B5 and compare E2/E3 for correlated response. The main breeding task then deliberately switches to a separate prepared young-candidate population; it is not a continuation of B5.</p>
+<p>In Current population choose Workshop default: BLUP versus GBLUP (young candidates), click Load programme settings, check the schedule and run. Record accuracy, gain, inbreeding and generation interval before changing the donor-reproduction template for the second run. The practical gives the exact settings. Use the prepared reference results if computation would delay discussion. The full manual below is a reference; advanced controls are not prerequisites for the workshop.</p>
+<p>The three applications may open in separate tabs. Separate online applications do not automatically share results. Download the full historical population and upload it in Base population; then download the full base population and upload it in Current population. CSV tables and PNG figures are useful records, but do not replace the full-population download for these transfers. Keep the same selected historical scenario and base when making a controlled comparison. A new run replaces the displayed results, so record or download results first.</p>
+<p>This manual describes both the prepared examples and the full controls. Beginners can follow the named examples without editing advanced settings. Defaults below refer to the ordinary starting controls; loading a preset can change them. Check the displayed settings and active schedule before running.</p>
+</section>
+</section>
+<section id="historical-population-simulation-model" class="level2">
+<h2 class="anchored" data-anchor-id="historical-population-simulation-model">2. Historical population: simulation model</h2>
+<p>This module simulates a finite, diploid population forward through non-overlapping generations. Each animal carries two phased chromosome copies. Founding alleles are sampled independently at marker sites, so markers begin in linkage equilibrium in expectation. Finite sampling can still produce nonzero initial LD.</p>
+<p>Each offspring receives a paternal and a maternal gamete. Parents are sampled randomly with replacement from the male and female populations. Gametes inherit chromosome segments with Haldane recombination: for adjacent markers separated by d Morgans, the probability of a phase switch is (1 - exp(-2d))/2. Genetic map distance controls recombination. Physical distance provides marker coordinates; changing Mb alone does not change recombination.</p>
+<p>Mutation flips 0 to 1 or 1 to 0 at existing biallelic marker sites. It does not create new sites. Demographic histories change the numbers of breeding males and females, producing drift, changes in diversity and LD. There is no selection or migration in this historical module. The examples illustrate mechanisms and are not a calibrated cattle population or a mutation-drift equilibrium model.</p>
+<section id="genome-and-initial-population-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="genome-and-initial-population-parameters">Genome and initial population parameters</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quick-start settings; Load these defaults</td>
+<td>Teaching defaults or larger marker set</td>
+<td>Loads a group of settings. The larger preset uses 5,000 SNPs per chromosome and a shorter history; it is not simply a higher-resolution version of an otherwise identical run. Inspect settings after loading.</td>
+</tr>
+<tr class="even">
+<td>Chromosomes</td>
+<td>3; 1-12</td>
+<td>Number of independently inherited chromosomes.</td>
+</tr>
+<tr class="odd">
+<td>Initial males; Initial females</td>
+<td>40; 40</td>
+<td>Census counts at generation 0. Each sex needs at least two animals; total historical population cannot exceed 500. These are not effective population sizes.</td>
+</tr>
+<tr class="even">
+<td>SNPs per chromosome</td>
+<td>1,000</td>
+<td>Number of biallelic marker sites. Enter one value for every chromosome or comma-separated values in chromosome order. Up to 5,000 per chromosome and 60,000 overall. More markers increase computation and can improve resolution.</td>
+</tr>
+<tr class="odd">
+<td>Chromosome length (cM)</td>
+<td>100</td>
+<td>Genetic map length. One value can apply to all chromosomes. More cM generally gives more recombination. 100 cM equals one Morgan.</td>
+</tr>
+<tr class="even">
+<td>Physical length (Mb)</td>
+<td>100</td>
+<td>Physical coordinate span. One Mb is one million base pairs. This sets positions, not the crossover rate.</td>
+</tr>
+<tr class="odd">
+<td>SNP positions / locations</td>
+<td>Even, Random, Clustered</td>
+<td>Even spacing, sorted random positions, or groups around sampled centres. Marker distribution changes the distances represented in LD bins.</td>
+</tr>
+<tr class="even">
+<td>Optional custom marker map (.csv)</td>
+<td>Optional</td>
+<td>Uploaded table with chr, position_cm and position_bp; snp is optional. It overrides chromosome number, marker counts, lengths and location settings. Each chromosome needs at least three markers with strictly increasing genetic and physical positions; marker names must be unique.</td>
+</tr>
+<tr class="odd">
+<td>LD pair sample budget</td>
+<td>30,000; 100-200,000</td>
+<td>Approximate within-chromosome pair budget. Small examples use all pairs; large examples sample pairs. More pairs reduce pair-sampling noise but require more time. This is not the number of animals.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="allele-frequencies-and-run-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="allele-frequencies-and-run-parameters">Allele frequencies and run parameters</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Starting allele-frequency distribution</td>
+<td>Uniform MAF</td>
+<td>Uniform MAF samples initial allele probabilities between the minimum and 0.5. Equal (0.5) uses 0.5 at every site. Rare-enriched MAF favours low frequencies. Fixed frequency assigns one specified probability to every site. All ancestral (0) begins with no segregating sites.</td>
+</tr>
+<tr class="even">
+<td>Min. initial MAF</td>
+<td>0.05</td>
+<td>Lower bound for Uniform MAF and Rare-enriched MAF. It does not force each realized founder-sample frequency to exceed that bound. It does not filter later generations.</td>
+</tr>
+<tr class="odd">
+<td>Fixed freq. (when selected)</td>
+<td>0.2</td>
+<td>Starting probability of allele 1 under Fixed frequency. It can range from 0 to 1. Not used by the other frequency modes.</td>
+</tr>
+<tr class="even">
+<td>Generations</td>
+<td>30; 1-120</td>
+<td>Number of historical generations after generation 0.</td>
+</tr>
+<tr class="odd">
+<td>Random seed</td>
+<td>2026</td>
+<td>Controls random draws. Repeat the same complete configuration and seed for reproducibility; changing a setting can change subsequent random draws.</td>
+</tr>
+<tr class="even">
+<td>Mutation per SNP / gamete</td>
+<td>0.00001; 0-0.1</td>
+<td>Probability of an allele flip at each transmitted site. Each scenario multiplies this shared rate by its own multiplier. The resulting rate must remain valid. High illustrative rates are not realistic estimates for every species.</td>
+</tr>
+<tr class="odd">
+<td>LD distance bin (cM)</td>
+<td>5; 0.2-50</td>
+<td>Width of distance groups in the LD plot. Narrow bins reveal detail but can contain few pairs; wider bins smooth the pattern.</td>
+</tr>
+<tr class="even">
+<td>Independent historical replicates</td>
+<td>5; 1-100</td>
+<td>Independent founder genomes and historical realizations. Enabled scenarios share a founder genome within each replicate, giving paired scenario comparisons.</td>
+</tr>
+<tr class="odd">
+<td>Uncertainty bands</td>
+<td>SE, SD, 95% confidence interval, None</td>
+<td>SD describes differences across runs. SE = SD/sqrt(n) describes uncertainty in the mean. Confidence intervals use a t distribution. At least two valid runs are needed; bands are pointwise.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scenario-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-parameters">Scenario parameters</h3>
+<p>Up to five scenarios can run together. Their labels describe the displayed comparison; the history type and numerical settings determine the simulation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Use scenario</td>
+<td>Include or exclude that scenario from the comparison.</td>
+</tr>
+<tr class="even">
+<td>Scenario name</td>
+<td>Unique nonempty label for plots, tables and the population to carry forward.</td>
+</tr>
+<tr class="odd">
+<td>Population history</td>
+<td>Constant keeps initial counts. Temporary change uses target counts from Start through End, inclusive, then returns to initial counts. Permanent change switches to target counts at Start. Linear change interpolates from initial counts at Start to target counts at End, then retains the target.</td>
+</tr>
+<tr class="even">
+<td>Target males; Target females</td>
+<td>Sex-specific census counts during or after the change. At least two of each sex; combined count at most 500. Constant histories ignore these targets.</td>
+</tr>
+<tr class="odd">
+<td>Change starts (gen); Change ends (gen)</td>
+<td>Whole generations within the run, with Start no later than End. Constant ignores these dates; Permanent uses Start for the switch.</td>
+</tr>
+<tr class="even">
+<td>Mutation-rate multiplier</td>
+<td>Multiplies the shared mutation rate for this scenario; 1 means unchanged, 0 means no mutation. The control allows 0-100.</td>
+</tr>
+</tbody>
+</table>
+<p>The teaching defaults include Constant; Mild bottleneck (20 males and 20 females, generations 10-20); Expansion (80 of each sex from generation 12); Gradual decline (to 20 of each sex from generation 8 to 30); and Severe bottleneck (8 of each sex, generations 10-20). All start from 40 males and 40 females. Loading another preset changes these values.</p>
+</section>
+<section id="reading-historical-outputs-and-choosing-a-population" class="level3">
+<h3 class="anchored" data-anchor-id="reading-historical-outputs-and-choosing-a-population">Reading historical outputs and choosing a population</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control or output</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Plot level / chromosome</td>
+<td>Genome combines within-chromosome information; it does not estimate LD between chromosomes. Choose one chromosome for a focused comparison.</td>
+</tr>
+<tr class="even">
+<td>Show generation 0 (initial)</td>
+<td>Adds the founder comparison. It helps distinguish sampling LD from LD accumulated during the history.</td>
+</tr>
+<tr class="odd">
+<td>Plot population counts</td>
+<td>Choose total animals, males or females. A return to the initial count does not restore alleles already lost.</td>
+</tr>
+<tr class="even">
+<td>Frequency view</td>
+<td>ALT-allele frequency is the frequency p of allele 1. MAF is min(p, 1-p), so a common ALT allele can have low MAF.</td>
+</tr>
+<tr class="odd">
+<td>Measure</td>
+<td>Expected heterozygosity averages 2p(1-p); mean MAF averages minor frequencies; segregating fraction is the fraction with 0 &lt; p &lt; 1; fixed SNPs counts sites at p = 0 or 1.</td>
+</tr>
+<tr class="even">
+<td>Per-chromosome panels</td>
+<td>Select LD decay, allele frequency or diversity for individual chromosome panels. These panels describe replicate 1.</td>
+</tr>
+<tr class="odd">
+<td>Chromosome; Example SNP</td>
+<td>Choose one marker for its allele-frequency trajectory in replicate 1. One trajectory is an illustration, not a replicate average.</td>
+</tr>
+<tr class="even">
+<td>Summary measure; Compare scenarios with</td>
+<td>Select the metric and baseline for replicate summaries. Differences are scenario minus baseline, paired within replicate. Historical paired intervals are pointwise and not adjusted for multiple comparisons.</td>
+</tr>
+<tr class="odd">
+<td>History to use in the base population</td>
+<td>Choose the final scenario whose genome you want to carry forward. Check the same label after importing into Base population.</td>
+</tr>
+<tr class="even">
+<td>CSV table; Figure to export; Final population for phased VCF</td>
+<td>Select which result to download. CSV contains tables, PNG contains a figure, and VCF contains phased marker genotypes. The full-population download retains the information needed by the next module.</td>
+</tr>
+</tbody>
+</table>
+<p>LD decay reports phased haplotype r-squared: r-squared = (pAB - pA*pB)^2 / [pA(1-pA)pB(1-pB)]. Fixed sites have no defined correlation and are excluded. Pair distances use cM. Genome means weight sampled chromosome pairs to account for different sampling fractions. Nearby sites often show stronger LD, but individual bins need not follow a perfectly smooth curve or a fixed scenario ranking.</p>
+<p>The LD decay and genetic diversity tabs show replicate means. Allele-frequency plots, individual trajectories, per-chromosome panels and the genome transferred to Base population use replicate 1. Downloads of replicate summaries retain all runs. A historical run and a recent breeding run use different definitions of a replicate; see Section 10.</p>
+</section>
+</section>
+<section id="base-population-construction-and-genetic-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="base-population-construction-and-genetic-architecture">3. Base population: construction and genetic architecture</h2>
+<p>Base animals are sampled from the final genome of the chosen historical scenario. For each chromosome, a complete paternal haplotype is sampled from the historical male pool and a maternal haplotype from the female pool, with replacement. This retains within-chromosome LD but does not reproduce the full historical genealogy. Year classes specify initial ages; they do not simulate past selection between those classes.</p>
+<p>The module chooses segregating marker sites as major and minor quantitative trait loci (QTL). Effects are additive. Marker dosages and locus effects determine true breeding values (TBVs). The base sample is calibrated to the requested genetic covariance; major and background components are constructed orthogonally in that combined sample. The major-locus inherited effects include an LD correction. Conditional component effects and inherited locus effects therefore need not be numerically identical.</p>
+<p>Without reaction norms, phenotype = TBV + residual. For trait j, residual variance Ve_j = Va_j*(1-h2_j)/h2_j. Residuals are independent across traits in their target covariance. Genetic and residual components are calibrated separately in the base sample; their realized cross-covariance need not be exactly zero. Exact target genetic covariance applies to all base animals together, not necessarily each herd or age class. It does not guarantee exact covariance or heritability in every small subgroup.</p>
+<section id="population-and-trait-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="population-and-trait-parameters">Population and trait parameters</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Choose a case; Generate teaching case</td>
+<td>B1-B7</td>
+<td>Generates the selected prepared architecture using the selected historical genome, 80 animals and seed 2026. It changes several inputs and resets EV fields; reload the intended objective afterwards.</td>
+</tr>
+<tr class="even">
+<td>Optional: import another Module 1 RDS</td>
+<td>Full historical population</td>
+<td>Upload the history downloaded from the first application. Loading a small teaching example replaces the current history.</td>
+</tr>
+<tr class="odd">
+<td>Historical scenario</td>
+<td>Available final histories</td>
+<td>Choose the scenario used for chromosome sampling. Confirm the intended history before generating animals.</td>
+</tr>
+<tr class="even">
+<td>Starting configuration; Load year-class preset</td>
+<td>One herd/year 0; four year classes; two herds/four classes</td>
+<td>Loads the year-class table. Loading a preset and generating animals are separate actions.</td>
+</tr>
+<tr class="odd">
+<td>Editable year classes (year relative to time 0)</td>
+<td>year, males, females, herd</td>
+<td>Each row is one birth-year and herd group. Year 0 means born at time 0; year -3 means age 3 at time 0. Counts are nonnegative integers; each row needs animals. Year must be -100 to 0; year/herd combinations must be unique. Total base size is at most 1,000, with at least two males and two females overall.</td>
+</tr>
+<tr class="even">
+<td>Traits</td>
+<td>1-3</td>
+<td>Number of biological traits. Use one additive variance and one heritability per trait, in trait order.</td>
+</tr>
+<tr class="odd">
+<td>Additive variances</td>
+<td>1 per trait</td>
+<td>Positive additive genetic variances in squared trait units. A larger value gives more genetic variation.</td>
+</tr>
+<tr class="even">
+<td>Genetic correlation 1-2; Correlation 1-3; Correlation 2-3</td>
+<td>0.4, 0, 0 in ordinary controls</td>
+<td>Correlations determine covariance: Cov(j,k) = rg(j,k)<em>sqrt(Va_j</em>Va_k). Only relevant pairs are used. For three traits, individually valid correlations may jointly produce an invalid matrix; the whole covariance matrix must be positive definite.</td>
+</tr>
+<tr class="odd">
+<td>Trait heritabilities</td>
+<td>0.3 per trait</td>
+<td>Values strictly between 0 and 1. They determine residual variance. Increasing h2 while retaining Va reduces residual variation; it does not increase Va. With reaction norms, h2 refers to x = 0.</td>
+</tr>
+<tr class="even">
+<td>Number of major QTL</td>
+<td>2; 1-5</td>
+<td>Number of sampled large-component loci. A small number cannot represent every covariance structure or share.</td>
+</tr>
+<tr class="odd">
+<td>Major-QTL share of total Vg (%)</td>
+<td>15; 1-90</td>
+<td>Share of the sum of genetic variances, not a guarantee for each trait. With reaction norms this share refers to intercept and slope coefficients together, not every environment. Infeasible combinations are rejected.</td>
+</tr>
+<tr class="even">
+<td>Minor-effect QTL</td>
+<td>30; 3-1,000</td>
+<td>Number of background loci, distinct from major loci. Enough eligible segregating markers and sample rank are required. With reaction norms there must be at least twice as many minor QTL as biological traits.</td>
+</tr>
+<tr class="odd">
+<td>Min base MAF</td>
+<td>0.01</td>
+<td>Filters sites eligible to become QTL in the sampled base. This is separate from the historical initial-MAF setting and the genomic prediction panel filter.</td>
+</tr>
+<tr class="even">
+<td>Random seed; Generate base population</td>
+<td>2026</td>
+<td>Generates animals and effects from the currently displayed settings. Generating again replaces the current base.</td>
+</tr>
+</tbody>
+</table>
+<p>Prepared examples: B1 uses one trait with h2 = 0.10; B2 uses h2 = 0.60. B3, B4 and B5 use two traits with h2 = 0.30 and genetic correlations +0.60, 0 and -0.60. B6 and B7 use one trait with reaction norms, h2 = 0.30, and slope/intercept variance ratios 0.20 and 0.80. Their additive variances are 1. Prepared cases are alternatives, not successive stages of one population.</p>
+</section>
+<section id="base-outputs-and-display-controls" class="level3">
+<h3 class="anchored" data-anchor-id="base-outputs-and-display-controls">Base outputs and display controls</h3>
+<p>Overview shows cohort counts and marker variation. In QTL positions &amp; effects, Trait to plot and Chromosome select the displayed locus effects. The major table distinguishes conditional major effects from inherited effects. Covariance &amp; scaling compares requested and realized covariance and the variance decomposition. Traits &amp; cohorts uses its Trait selector for TBV distributions, phenotype-versus-TBV plots and cohort means. The biological-trait selector in Reaction norms chooses the reaction-norm outputs.</p>
+<p>The full base-population download preserves animals, phased genomes, effects, phenotypes, ages and the saved objective. Animal, QTL, covariance and reaction-norm table downloads are useful for inspection but are not replacements for the full base transfer. Save results before generating another case.</p>
+</section>
+</section>
+<section id="economic-objectives-and-correlated-response" class="level2">
+<h2 class="anchored" data-anchor-id="economic-objectives-and-correlated-response">4. Economic objectives and correlated response</h2>
+<p>For the two-trait B3-B5 examples, open BV and economic values. An animal’s breeding value describes inherited merit in trait units. An economic value (EV) assigns a weight to a trait. Changing EVs changes the objective and ranking without changing the animals, their BVs or their covariance.</p>
+<p>The objective is H = EV1<em>BV1 + EV2</em>BV2. The example objectives are E1 (1,1), E2 (1,0), E3 (2,1) and E4 (1,-1). Negative weights favour a reduction in that trait. Weights depend on trait units: a weight of 2 is not meaningful without knowing the scale. Multiplying all weights by the same positive constant preserves ranking but rescales numerical objective gain.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Economic objective examples; Load EV example</td>
+<td>Loads one of E1-E4 into the two EV fields. It does not create new animals.</td>
+</tr>
+<tr class="even">
+<td>EV for Trait1; EV for Trait2</td>
+<td>Numerical weights. At least one must be nonzero.</td>
+</tr>
+<tr class="odd">
+<td>Candidates selected (%)</td>
+<td>5-50%, initially 20%. Rounds up to a whole number of selected candidates. Lower fractions generally imply stronger selection. This controls the base geometry demonstration, not the later schedule’s parent counts.</td>
+</tr>
+<tr class="even">
+<td>Rank candidates using</td>
+<td>True BV objective demonstrates selection with perfect genetic information. Phenotype weighted by EVs demonstrates mass selection with residual noise.</td>
+</tr>
+<tr class="odd">
+<td>Use these EVs in Module 3</td>
+<td>Saves the objective with the current base. Download the full base after saving, then check the imported selection weights in Current population. Existing breeding results require a new run to change.</td>
+</tr>
+</tbody>
+</table>
+<p>The ellipse is a 95% normal-theory genetic distribution contour centred on the sample mean. It is not a confidence interval for the mean and does not promise exactly 95% empirical coverage. Equal-merit lines describe combinations with equal H. The EV arrow shows objective direction; the expected genetic-shift arrow depends on genetic covariance. In general the two directions differ.</p>
+<p>For multivariate normal truncation selection, expected selected-candidate shift = i<em>G</em>w / sqrt(w’ C w). Here G is additive covariance, w is the EV vector, i is normal-theory selection intensity for the selected fraction, and C is G for true-BV ranking or G + R for phenotype ranking. The observed shift is the actual selected candidates’ mean BV minus the full candidate mean. Finite samples can differ from the expectation. Neither shift is a simulated offspring response; offspring response comes from reproduction in Current population.</p>
+</section>
+<section id="genotype-by-environment-interaction" class="level2">
+<h2 class="anchored" data-anchor-id="genotype-by-environment-interaction">5. Genotype by environment interaction</h2>
+<p>When genetic reaction norms are enabled, genetic value for animal i at environment x is g_i(x) = a_i + b_i*x. Both the intercept a_i and sensitivity b_i are inherited from the same locus architecture. Phenotype additionally contains a shared environmental mean slope times x and a residual. Changing a common environmental mean does not itself create genetic re-ranking.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enable genetic reaction norms (G×E)</td>
+<td>Off</td>
+<td>Adds inherited genetic slopes to each biological trait.</td>
+</tr>
+<tr class="even">
+<td>Genetic slope variance / intercept variance</td>
+<td>0.20; 0.01-1 in the control</td>
+<td>Multiplies the reference genetic covariance for slope covariance. Larger values usually make genetic sensitivity and re-ranking more pronounced.</td>
+</tr>
+<tr class="odd">
+<td>Genetic correlation: intercept vs slope</td>
+<td>0; -0.95 to 0.95</td>
+<td>Association between inherited merit at x = 0 and inherited sensitivity. Cross-covariance is rho<em>sqrt(ratio)</em>G0.</td>
+</tr>
+<tr class="even">
+<td>Evaluation environments</td>
+<td>5; 2-15</td>
+<td>Number of evenly spaced x values for assigning one observation environment per base animal, approximately balanced over the whole base. It is not repeated measurements on every base animal.</td>
+</tr>
+<tr class="odd">
+<td>Environmental gradient: minimum; Environmental gradient: maximum</td>
+<td>-1; +1</td>
+<td>Limits of the evaluation grid. Minimum must be less than maximum, and the range must contain reference x = 0.</td>
+</tr>
+<tr class="even">
+<td>Fixed environmental mean slope</td>
+<td>0</td>
+<td>Shared change in phenotypic mean per unit x, separate from genetic slopes.</td>
+</tr>
+<tr class="odd">
+<td>Biological trait</td>
+<td>Display selector</td>
+<td>Chooses the reaction norms, variances and re-ranking summary to inspect.</td>
+</tr>
+</tbody>
+</table>
+<p>Reference covariance G0 applies to genetic intercepts at x = 0. Slope covariance is ratio<em>G0. For one trait, genetic variance at x is Va + 2</em>x<em>Cov(a,b) + x^2</em>Vb. Residual variance remains constant along x, so heritability can vary between environments. The entered h2 is the reference value, not a universal value across the gradient.</p>
+<p>Crossing genetic curves show re-ranking. The theoretical genetic correlation between x and z uses covariance Va + (x+z)<em>Cov(a,b) + x</em>z*Vb divided by the two genetic standard deviations. A realized rank correlation among a finite sample is a different statistic and need not equal that Pearson genetic correlation.</p>
+<p>The breeding application maps each herd to a named environment and numerical x. Names such as Hot or Cool do not determine quality; x is a defined covariate. Base observations keep their original observed x. New offspring receive their birth herd’s x. The current model creates one phenotypic record per animal, not longitudinal repeated measurements. A single herd at x = 0 does not demonstrate selection across contrasting environments. The recent G×E plots also summarize genetic merit at x = -1 and +1, which should be interpreted relative to the chosen gradient.</p>
+</section>
+<section id="current-population-the-yearly-breeding-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="current-population-the-yearly-breeding-cycle">6. Current population: the yearly breeding cycle</h2>
+<p>Use Optional: import another base RDS to upload the full base population and confirm its historical source, cohorts and selection weights. The locus effects and base genotype centres are frozen. Each year the model identifies animals within reproductive-age limits, selects usable phenotypic records, predicts candidate merit, selects parents, chooses matings within capacity, and generates offspring by chromosome recombination. Offspring TBVs are reconstructed from their inherited loci; effects are not rescaled to force a desired gain or variance each year.</p>
+<p>Animal cohorts overlap: a parent can breed in several years while age-eligible. There is no explicit mortality, survival selection, fertility failure, disease process or migration. Animals outside reproductive ages remain in recorded data but cannot become parents. Recent offspring do not receive new mutations in this model. Offspring phenotypes add residual noise to inherited genetic value, plus the known environmental mean when reaction norms are active.</p>
+<section id="prepared-programmes-and-basic-controls" class="level3">
+<h3 class="anchored" data-anchor-id="prepared-programmes-and-basic-controls">Prepared programmes and basic controls</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Choose a programme; Load programme settings</td>
+<td>P1-P5 or young-candidate benchmark</td>
+<td>P1 mass selection, P2 pedigree BLUP and P3 GBLUP each use four sires. P4 compares all three with four sires; P5 compares them with eight. These plans retain the imported base and saved objective and load 12 years, 20 offspring per herd/year and five replicates.</td>
+</tr>
+<tr class="even">
+<td>Workshop default: BLUP versus GBLUP (young candidates)</td>
+<td>Prepared workshop case</td>
+<td>Replaces the previous base with a prepared one-trait population containing recorded relatives. Uses 6 years, 80 births/year, four age-1 sires, 80 regular dams aged 1-4, no MOET, random mating, 100% phenotyping/genotyping, and own-record availability at age 2. It is not a continuation of B5.</td>
+</tr>
+<tr class="odd">
+<td>Load teaching example</td>
+<td>Alternative initial population</td>
+<td>Replaces your imported population. Do not use it when you intend to retain the base you just constructed.</td>
+</tr>
+<tr class="even">
+<td>Beginner workshop view</td>
+<td>Off</td>
+<td>Simplifies the display and selects mass selection. It does not replace the need to apply a plan.</td>
+</tr>
+<tr class="odd">
+<td>Simple teaching plan: Breeding years; Offspring per herd/year; Selected sires per herd</td>
+<td>4; 20; 4</td>
+<td>Apply simple plan uses one regular dam per offspring, no MOET, random mating and reproductive ages 1-10. Edits take effect after Apply simple plan, which clears earlier results. The simplified years control allows 1-8.</td>
+</tr>
+<tr class="even">
+<td>Selection index weights by trait</td>
+<td>Imported EVs, or 1</td>
+<td>One weight per biological trait, in order. At least one nonzero. Used for ranking and the true objective; compare gains only under compatible weights and scales.</td>
+</tr>
+<tr class="odd">
+<td>Compare selection strategies</td>
+<td>Mass selection, Pedigree BLUP, GBLUP, Single-step GBLUP, Oracle TBV</td>
+<td>Choose one or more methods. Their meanings and information requirements appear in Section 9.</td>
+</tr>
+<tr class="even">
+<td>Breeding years</td>
+<td>4 in ordinary full controls</td>
+<td>Years to simulate; the active schedule needs one row per year and herd. Loading a named programme changes this value.</td>
+</tr>
+<tr class="odd">
+<td>Random seed; Independent breeding replicates (paired by seed)</td>
+<td>2026; 5</td>
+<td>Starts each method from the same fixed imported base within each replicate. Up to 100 replicates. Selection changes the later populations, so matching seeds does not make all later animals or random events identical.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ages-herds-and-information-settings" class="level3">
+<h3 class="anchored" data-anchor-id="ages-herds-and-information-settings">Ages, herds and information settings</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control</th>
+<th>Starting value / options</th>
+<th>Meaning and effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minimum sire age; Maximum sire age</td>
+<td>1; 10</td>
+<td>Inclusive age range in breeding years for male candidates. Age = current breeding year - birth year.</td>
+</tr>
+<tr class="even">
+<td>Minimum dam age; Maximum dam age</td>
+<td>1; 10</td>
+<td>Inclusive age range for female candidates. Initial year classes must supply enough age-eligible animals.</td>
+</tr>
+<tr class="odd">
+<td>Sire availability</td>
+<td>Within herd; Across herds</td>
+<td>Whether male candidates can serve other herds. Dams remain within herd. Across-herd sire use shares per-sire offspring capacity across herds.</td>
+</tr>
+<tr class="even">
+<td>Mating design</td>
+<td>Random; Low pedigree kinship</td>
+<td>Random samples available selected parents. Low pedigree kinship samples candidate pairs and chooses a pair with low recorded coancestry, respecting capacities. It is a heuristic, not a global optimum or genomic optimum-contribution selection.</td>
+</tr>
+<tr class="odd">
+<td>Male proportion of offspring</td>
+<td>0.50; 0.10-0.90</td>
+<td>Probability an offspring is male. Realized sex counts fluctuate; a 50% setting does not enforce equal counts.</td>
+</tr>
+<tr class="even">
+<td>Phenotyped offspring (%)</td>
+<td>100; 20-100</td>
+<td>Probability each new animal receives a phenotype, subject to measurement-age availability. It does not remove phenotypes already present in the imported base.</td>
+</tr>
+<tr class="odd">
+<td>Age when own phenotype becomes available (years)</td>
+<td>0</td>
+<td>Records are withheld from evaluation until this age. Mass selection also needs an available own phenotype. Increasing the age creates young candidates lacking own records.</td>
+</tr>
+<tr class="even">
+<td>Genotyped offspring (%) - 100% for fair GBLUP benchmark</td>
+<td>100; 0-100</td>
+<td>Probability offspring genotypes are observed for prediction. All actual genomes are still transmitted biologically. Imported base animals are treated as genotyped. Pure GBLUP can use only genotyped candidates; incomplete genotyping can change the usable comparison group.</td>
+</tr>
+<tr class="odd">
+<td>Reference phenotypes for BLUP / GBLUP / ssGBLUP</td>
+<td>All recorded; Base only; Recent years; Base + recent</td>
+<td>Chooses which existing recorded animals contribute phenotypes. Reference-herd and phenotype-age restrictions also apply. Base only uses birth year no later than 0; Recent years uses birth years at least current year minus the window.</td>
+</tr>
+<tr class="even">
+<td>Recent reference window (years)</td>
+<td>3</td>
+<td>Birth-year window for the Recent years component, not simply the last three batches of newly measured records.</td>
+</tr>
+<tr class="odd">
+<td>Reference herds (phenotypic records)</td>
+<td>All imported herds</td>
+<td>Filters phenotypic reference records. It does not remove animals from the biological population or automatically remove their observed genotypes.</td>
+</tr>
+<tr class="even">
+<td>Genomic-panel SNPs</td>
+<td>500; 50-10,000 requested</td>
+<td>Samples up to this many eligible segregating panel markers. Eligible base allele frequencies must be greater than 0.01 and less than 0.99; fewer eligible markers means a smaller actual panel. At least ten are required.</td>
+</tr>
+<tr class="odd">
+<td>A22 blend into genomic G</td>
+<td>0.10; 0.02-0.50</td>
+<td>Stabilizes the marker relationship matrix: Gstar = (1-blend)<em>G + blend</em>A22. A22 is the pedigree relationship submatrix for genotyped animals. A larger blend gives more pedigree influence; it is not heritability.</td>
+</tr>
+<tr class="even">
+<td>Exclude known causal QTL from genomic marker panel</td>
+<td>On</td>
+<td>Removes simulated causal loci from the prediction panel. Prediction then relies on linked marker information rather than direct observation of the causal sites. Turning it off changes the information scenario.</td>
+</tr>
+<tr class="odd">
+<td>Herd → user-named environment and reaction norm x</td>
+<td>herd, environment, x</td>
+<td>One mapping row per herd. Environment is a user label; x is the numerical target for genetic merit and new observations. With no reaction norms, genetic slopes are zero.</td>
+</tr>
+</tbody>
+</table>
+<p>Keep population, candidate group, recorded information, objective, selected-parent numbers, births, reproductive ages, mating design and period fixed when isolating the effect of a prediction method. Always check usable candidate counts; identical control settings do not guarantee identical usable candidates when genotypes or own phenotypes are missing.</p>
+</section>
+</section>
+<section id="breeding-schedule-parent-numbers-and-moet" class="level2">
+<h2 class="anchored" data-anchor-id="breeding-schedule-parent-numbers-and-moet">7. Breeding schedule, parent numbers and MOET</h2>
+<p>The active schedule, not the template fields, drives reproduction. Each row is one breeding year and herd. In the table, year and herd identify the row; numerical cells can be edited. Inspect both arithmetic capacity and age eligibility before running.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Schedule column / template control</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>year; herd</td>
+<td>Breeding year and herd. A row is required for every simulated combination.</td>
+</tr>
+<tr class="even">
+<td>offspring / Offspring/herd/year</td>
+<td>Number of births required in that row. This is a fixed total, not a birth probability.</td>
+</tr>
+<tr class="odd">
+<td>sires / Selected sires</td>
+<td>Number of highest-ranking usable male candidates sought. Actual selected count cannot exceed available candidates; capacities must still support all births.</td>
+</tr>
+<tr class="even">
+<td>regular_dams / Selected regular dams</td>
+<td>Highest-ranking conventional dams after the donor group is removed.</td>
+</tr>
+<tr class="odd">
+<td>moet_dams / Selected MOET dams</td>
+<td>Highest-ranking donor dams, selected before regular dams. The two female groups do not overlap within that row.</td>
+</tr>
+<tr class="even">
+<td>moet_pct / MOET offspring %</td>
+<td>Fraction of total births assigned to donors. Donor births = round(offspring*percentage/100); remaining births are conventional.</td>
+</tr>
+<tr class="odd">
+<td>sire_cap / Offspring/sire</td>
+<td>Maximum offspring per selected sire in that year, shared across herds when sires are used across herds.</td>
+</tr>
+<tr class="even">
+<td>regular_cap / Offspring/regular dam</td>
+<td>Maximum conventional offspring per selected dam for the row.</td>
+</tr>
+<tr class="odd">
+<td>moet_cap / Offspring/MOET dam</td>
+<td>Maximum donor offspring per selected MOET dam for the row.</td>
+</tr>
+</tbody>
+</table>
+<p>MOET means multiple ovulation and embryo transfer. Here it is an offspring-number approximation: selected donors can contribute more offspring. The model does not simulate embryo physiology, recipient dams, transfer failures, costs or fertility. Increasing donor output can concentrate ancestry and change gain and inbreeding; neither response is forced.</p>
+<p>For each row, selected sires times sire capacity must cover all births; regular dams times regular capacity must cover conventional births; and donor dams times donor capacity must cover donor births. These arithmetic conditions are necessary but not sufficient: eligible animals and method-specific information must also be available. Selecting more parents than exist does not create new candidates.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Action or planner control</th>
+<th>Effect and caution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Create / reset yearly schedule</td>
+<td>Rebuilds the schedule from current template values and overwrites table edits.</td>
+</tr>
+<tr class="even">
+<td>Apply template to all existing years</td>
+<td>Copies current template values into existing rows. Merely changing template fields does not update the active table.</td>
+</tr>
+<tr class="odd">
+<td>Fix mating capacity in schedule</td>
+<td>Adjusts selected-dam counts or sire capacity to address arithmetic shortfalls. It does not create eligible animals or alter the imported base or requested births.</td>
+</tr>
+<tr class="even">
+<td>Extend / trim years (keep edits)</td>
+<td>Resizes the schedule to the requested period while retaining applicable edited rows. Recheck capacity afterwards.</td>
+</tr>
+<tr class="odd">
+<td>Illustrative 15-year dairy template</td>
+<td>Loads a larger example. It is illustrative and can be slow; it does not guarantee feasible age structure or a calibrated dairy herd.</td>
+</tr>
+<tr class="even">
+<td>Save schedule CSV; Import edited schedule CSV</td>
+<td>Downloads or uploads the yearly plan. Reinspect the active schedule after import.</td>
+</tr>
+<tr class="odd">
+<td>Target fraction of candidates selected</td>
+<td>Initially 0.70, range 0.10-1. Used by the feasibility planner, not a replacement for actual schedule parent counts. Lower fractions imply needing more candidates for a fixed number selected.</td>
+</tr>
+<tr class="even">
+<td>Dairy feasibility planner</td>
+<td>Year 1 uses actual imported ages and sexes. Later projections use planned births and assume no mortality. It is an approximation and does not modify the population.</td>
+</tr>
+<tr class="odd">
+<td>Add base founders to meet Year 1 target</td>
+<td>Explicitly adds sampled whole-chromosome founders to reproductive-age classes. This changes the starting population and assumes new unrelated founders; it is not pedigree development through earlier breeding. Use only as a deliberate new scenario. Save expanded base downloads the changed population.</td>
+</tr>
+</tbody>
+</table>
+<p>If a run reports a shortfall, identify the year, herd, sex, recording requirement and capacity involved. Correct the biological plan rather than interpreting a failed run as a scientific result. For a matched comparison, make any intentional correction before running every method.</p>
+</section>
+<section id="breeding-outputs-and-display-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="breeding-outputs-and-display-parameters">8. Breeding outputs and display parameters</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Output or control</th>
+<th>How to interpret it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overview</td>
+<td>Check imported animals, genome, run configuration and cohort sizes before interpreting outcomes.</td>
+</tr>
+<tr class="even">
+<td>Genetic trait</td>
+<td>Selects the trait’s genetic mean and variance. With multiple traits inspect all trait responses as well as the weighted objective.</td>
+</tr>
+<tr class="odd">
+<td>Genetic gain</td>
+<td>Changes in true genetic values of newborn cohorts relative to the imported baseline. The ordinary baseline is the combined base; the prepared genomic case uses its configured youngest-base reference.</td>
+</tr>
+<tr class="even">
+<td>Annual genetic gain (index)</td>
+<td>(Final mean true objective - initial baseline mean true objective) / number of breeding years. This is endpoint average gain per year, not a fitted trend slope or a per-generation response.</td>
+</tr>
+<tr class="odd">
+<td>Remaining genetic variance</td>
+<td>Sample variance of TBV in the displayed cohort. Selection, drift, segregation and changing relationships can alter it; it is not held at its initial target.</td>
+</tr>
+<tr class="even">
+<td>Pedigree inbreeding F</td>
+<td>F_i = A_ii - 1, computed from recorded parents. Ordinary sampled founders have F = 0 by convention; historical inbreeding is not reconstructed by that pedigree. A supplied recorded pedigree contributes relationships.</td>
+</tr>
+<tr class="odd">
+<td>Annualized pedigree inbreeding rate, %</td>
+<td>100*[1 - ((1-F_final)/(1-F_initial))^(1/years)]. This is an annual change relative to remaining non-inbred proportion; it is not F divided by years or a rate per generation.</td>
+</tr>
+<tr class="even">
+<td>Heterozygosity</td>
+<td>Observed fraction of heterozygous inherited SNP genotypes per animal, averaged over the cohort. Different from historical expected heterozygosity 2p(1-p), and different from pedigree F.</td>
+</tr>
+<tr class="odd">
+<td>Candidate group</td>
+<td>Young candidates without an own record; All eligible candidates; Sire candidates. These are distinct groups and can have different accuracies.</td>
+</tr>
+<tr class="even">
+<td>Selection accuracy</td>
+<td>Pre-selection sample correlation between true target-environment genetic objective and the method’s selection criterion among candidates with finite scores. For BLUP methods the criterion is predicted genetic merit; for mass selection it is weighted phenotype.</td>
+</tr>
+<tr class="odd">
+<td>Young-candidate accuracy</td>
+<td>Restricts to candidates younger than own-phenotype availability age. It is not the same as every animal with a missing own record. At age setting 0 this group is empty.</td>
+</tr>
+<tr class="even">
+<td>Candidate statistics</td>
+<td>Reports age-eligible and usable/genotyped candidates, reference records and selected parents. Correlation is unavailable if there are too few usable candidates or negligible variation; unavailable does not mean zero.</td>
+</tr>
+<tr class="odd">
+<td>Generation interval</td>
+<td>Average actual parental age at offspring birth, weighted by the actual matings/offspring. Combined interval averages sire and dam contributions; separate sire and dam intervals can differ.</td>
+</tr>
+<tr class="even">
+<td>Biological trait in Reaction norm G×E</td>
+<td>Selects environment-specific genetic predictions and cohort response. Genetic values use inherited intercept plus x times slope.</td>
+</tr>
+<tr class="odd">
+<td>Selection scenario in Pedigree &amp; animals</td>
+<td>Chooses which method’s stored individual animals and mating records to inspect. Individual details are retained for replicate 1.</td>
+</tr>
+<tr class="even">
+<td>Compare; Error bars for method comparison</td>
+<td>Chooses the outcome and SE, SD, 95% interval or no band in replicate comparison. These are statistical display choices and do not change simulated biology.</td>
+</tr>
+</tbody>
+</table>
+<p>Accuracy uses TBVs only to evaluate predictions. The BLUP prediction solver does not use candidate TBVs as observations. Oracle TBV is the explicitly labelled exception for a perfect-information demonstration. These realized correlations are simulation diagnostics, not cross-validation results from an external dataset. Replicate accuracy summaries average valid year/herd correlations; they are not one pooled correlation of all animals.</p>
+<p>Save files &amp; validation offers full-population results, trends, reference/accuracy tables, individual predictions, animal/pedigree records, matings, marker-panel information, replicate summaries and paired tests. Full individual genomes and records are retained for replicate 1 of each method; trends and statistical summaries cover all replicates. Use the individual-prediction CSV to inspect candidate TBVs, EBVs, age, selection and record use. Download your results before replacing a run.</p>
+</section>
+<section id="selection-and-prediction-methods" class="level2">
+<h2 class="anchored" data-anchor-id="selection-and-prediction-methods">9. Selection and prediction methods</h2>
+<section id="mass-selection-and-oracle-tbv" class="level3">
+<h3 class="anchored" data-anchor-id="mass-selection-and-oracle-tbv">Mass selection and Oracle TBV</h3>
+<p>Mass selection ranks candidates using the EV-weighted sum of their own phenotypes. An animal without usable own phenotypes, or younger than the phenotype-availability age, cannot receive a usable mass-selection score. Environmental and residual variation can make phenotype rank differ from genetic rank. It does not use pedigree to improve predictions.</p>
+<p>Oracle TBV ranks on the true EV-weighted genetic value at the target environment. It is a perfect-information teaching reference. Real breeders do not know TBVs. Do not interpret it as a practical prediction method.</p>
+</section>
+<section id="pedigree-blup" class="level3">
+<h3 class="anchored" data-anchor-id="pedigree-blup">Pedigree BLUP</h3>
+<p>Pedigree BLUP combines available phenotypes with additive pedigree relationships A. A has founder diagonal 1, offspring relationships equal to the average of parental relationships, and offspring F equal to half the relationship between sire and dam. Unknown founders are unrelated in the recorded pedigree, even when their sampled genomes share historical ancestry.</p>
+<p>For a trait without G×E, genetic covariance between individuals i and j is A_ij<em>Va. The predictor is the covariance-based BLUP expression: predicted candidate merit = Cov(candidate, recorded animals)</em>[Cov(recorded genetic values) + Ve*I]^-1*(recorded phenotypes - known fixed mean). Genetic and residual parameters come from the base setup; they are not estimated by fitting variance components to each run. Known simulated fixed environmental means are subtracted rather than estimated as unknown herd or year effects. A small numerical stabilizer is used in solving.</p>
+</section>
+<section id="gblup-and-single-step-gblup" class="level3">
+<h3 class="anchored" data-anchor-id="gblup-and-single-step-gblup">GBLUP and single-step GBLUP</h3>
+<p>GBLUP uses marker-based realized relationships. Marker dosage is 0, 1 or 2; W centres dosage at 2p using base-panel allele frequencies, which remain fixed over years. The genomic relationship matrix is G = W*W’ / sum[2p(1-p)]. It is blended toward the corresponding pedigree block A22 for numerical stability.</p>
+<p>Pure GBLUP uses genotyped reference animals and genotyped candidates only. Non-genotyped candidates do not receive a hidden pedigree fallback. For a fair BLUP/GBLUP information comparison use 100% candidate genotyping, the same phenotypic reference information and matched breeding settings. Marker information is useful only to the extent that it informs relevant genetic relationships and linked effects; a random tiny population or sparse panel need not show a strong advantage.</p>
+<p>Single-step GBLUP combines pedigree and observed genomic information in one relationship matrix H. In inverse form, H^-1 equals A^-1 plus a genotyped-animal block containing Gstar^-1 - A22^-1. Thus it can connect genotyped and non-genotyped animals through pedigree. The implementation uses an algebraically equivalent covariance form. The genotyping fraction controls which animals enter the genomic block; the reference policy controls which phenotypes are used. These are separate choices.</p>
+</section>
+<section id="multiple-traits-and-reaction-norm-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-traits-and-reaction-norm-prediction">Multiple traits and reaction-norm prediction</h3>
+<p>Each biological trait is predicted separately, then trait predictions are combined with EV weights. The simulation generates genetic correlations between biological traits, but prediction does not use a full multi-trait BLUP that borrows phenotypic information between those traits.</p>
+<p>With reaction norms, each trait has a jointly modelled genetic intercept and slope. Covariance of observed genetic records at x_i and x_j is S_ij*[Va + Cov(a,b)<em>(x_i+x_j) + Vb</em>x_i*x_j], where S is A, blended G or H. Candidate prediction uses the corresponding covariance at its target x. This is a linear genetic random-regression model per biological trait. Residual variance is constant along x; no nonlinear reaction norm or residual G×E is fitted.</p>
+</section>
+</section>
+<section id="replicates-uncertainty-and-fair-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="replicates-uncertainty-and-fair-comparisons">10. Replicates, uncertainty and fair comparisons</h2>
+<p>Historical replicates redraw founders. Within a historical replicate, the demographic scenarios share the founder genome. Only replicate 1 supplies the genome carried forward. Recent breeding replicates instead share one fixed imported base and frozen architecture, and repeat selection and reproduction with different seeds. Their uncertainty is conditional on that base; it does not include variation over newly generated historical populations.</p>
+<p>SD describes run-to-run variation; SE describes uncertainty in an estimated mean. A 95% t interval is mean plus or minus t(0.975,n-1)*SE. With one valid replicate these quantities are unavailable. More replicates improve precision but do not correct a biased model, incomparable objectives or unmatched populations.</p>
+<p>Recent method comparisons pair results by replicate. Differences are method A minus method B. Paired t tests use those differences and report Holm-adjusted p-values across pairwise method comparisons for the selected outcome. Confidence intervals remain ordinary pointwise intervals. Small numbers of replicates have little power for small effects; statistical significance is not the same as teaching or practical importance.</p>
+<p>The workshop young-candidate case was designed to make genomic information informative before an own record becomes available. Inspect measured accuracy and gain, together with uncertainty and candidate counts. It is not a universal ranking of methods or evidence that GBLUP must reduce inbreeding. Relatedness, mating decisions, parental contributions and realized selection determine the inbreeding outcome.</p>
+<p>The breeder equation gives a useful interpretation of response: annual gain is related to selection intensity, prediction accuracy, genetic standard deviation and generation interval. This simulation explicitly generates inheritance and matings; it does not set gain by substituting an assumed accuracy into that equation. Repeated selection changes variance and relationships, so a simple constant-parameter prediction need not track every year.</p>
+</section>
+<section id="practical-limitations-and-troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="practical-limitations-and-troubleshooting">11. Practical limitations and troubleshooting</h2>
+<p>If LD is absent, check for segregating markers, the initial frequency mode, mutation, distance bins and sampled-pair counts. All-ancestral founders without mutation cannot create polymorphism. If a bin has very few pairs, interpret it cautiously. A bottleneck can increase LD while reducing diversity; population-size recovery need not restore lost variation.</p>
+<p>If base generation fails, check positive variances, a positive-definite correlation matrix, enough segregating loci passing MAF, enough animals and an attainable major-QTL share. Extreme shares or dependent loci can be infeasible. Changing a seed is a new realization; keep it fixed when the point is to isolate one parameter.</p>
+<p>If a breeding run fails, check the active schedule, parent ages, usable own records/genotypes, reference-herd/window filters and mating capacities. Pure GBLUP needs at least three genotyped phenotypic reference animals in each evaluation year. A capacity repair does not create candidates. Importing another base or adding founders changes the comparison and should be documented as a new scenario.</p>
+<p>If the genomic teaching case replaces your population, return to your saved full base before continuing the broader exercise. If the selection weights differ after transfer, save the intended EVs in Base population, download the full base again and re-import it. Record the base identity, objective, period, methods, settings and replicate count alongside your conclusions.</p>
+<p>Large populations, many years, many markers and many replicates can make prediction slow. Relationship matrices grow with all retained animals. Start with a small prepared plan. The larger dairy template is not a guarantee that a browser-hosted session can complete that workload.</p>
+<p>ADAM-Edu uses simplified additive inheritance, finite marker maps, known variance parameters and known environmental means. It does not implement dominance, epistasis, full multi-trait prediction, commercial economic optimisation, complete livestock demography or a production breeding evaluation. Use it to investigate mechanisms, compare controlled scenarios and discuss what additional evidence a real breeding decision would require.</p>
+</section>
+<section id="glossary" class="level2">
+<h2 class="anchored" data-anchor-id="glossary">12. Glossary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SNP; QTL</td>
+<td>A biallelic marker site; a locus assigned an effect on a quantitative trait. Some SNPs act as simulated causal QTL.</td>
+</tr>
+<tr class="even">
+<td>Haplotype; genotype dosage</td>
+<td>Alleles along one chromosome copy; count of allele 1 across the two copies at a site.</td>
+</tr>
+<tr class="odd">
+<td>LD; MAF</td>
+<td>Association between alleles at different loci; frequency of the less common allele at one locus.</td>
+</tr>
+<tr class="even">
+<td>TBV; EBV</td>
+<td>True additive genetic value known by the simulator; estimated breeding value from available information.</td>
+</tr>
+<tr class="odd">
+<td>Va; Ve; h2</td>
+<td>Additive genetic variance; residual variance; Va/(Va+Ve) at the specified population/environment.</td>
+</tr>
+<tr class="even">
+<td>Genetic correlation</td>
+<td>Standardized additive covariance between two traits or environmental expressions.</td>
+</tr>
+<tr class="odd">
+<td>EV; H</td>
+<td>Economic value or trait weight; the weighted true genetic objective. The same symbol H also commonly denotes the single-step relationship matrix; the context distinguishes them.</td>
+</tr>
+<tr class="even">
+<td>A; G; H relationship matrices</td>
+<td>Pedigree, genomic and combined single-step additive relationships. Genetic covariance G in the base module is a trait covariance matrix, distinct from genomic relationship G.</td>
+</tr>
+<tr class="odd">
+<td>Reference population</td>
+<td>Animals whose usable phenotypic records contribute to prediction, subject to selected filters.</td>
+</tr>
+<tr class="even">
+<td>Candidate; selected parent</td>
+<td>An eligible animal evaluated before selection; an animal actually chosen for reproduction.</td>
+</tr>
+<tr class="odd">
+<td>Cohort; generation interval</td>
+<td>Animals born in one breeding year; average parental age at offspring birth. A breeding year is not a non-overlapping generation.</td>
+</tr>
+<tr class="even">
+<td>Inbreeding; heterozygosity</td>
+<td>Recorded pedigree autozygosity expectation relative to its founders; proportion of heterozygous marker genotypes or its frequency-based expectation, as labelled.</td>
+</tr>
+<tr class="odd">
+<td>Reaction norm; G×E</td>
+<td>Genetic value expressed as a function of environment; inherited differences in environmental sensitivity that can change relative performance.</td>
+</tr>
+<tr class="even">
+<td>MOET</td>
+<td>Multiple ovulation and embryo transfer, approximated here through selected donor dams and offspring capacities.</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>ADAM-Edu · Animal breeding and quantitative genetics</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
